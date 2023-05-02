@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+.image {
+  text-align: center;
+}
+
+img {
+  border: 10px solid rgb(240, 154, 25);
+  width: 50%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 30px;
+}
+
+caption {
+  border: solid red;
+  color: red;
+  padding: 3px;
+  margin-bottom: 15px;
+}
+
+table {
+  text-align: center;
+}
+
+ol + h2 {
+  text-align: center;
+}
+
+p + h2,
+ul li {
+  padding-left: 30px;
+}
+
+ul {
+  list-style-position: inside;
+}

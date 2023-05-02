@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.navbar {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+body {
+  background-image: url("Thor.jpg");
+  background-size: cover;
+}
+
+.image {
+  width: 30px;
+  padding-bottom: 5px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  margin-right: 20px;
+}
+nav a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.text {
+  margin-top: 20%;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  color: rgb(156, 211, 211);
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12;
+  color: azure;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  h1 {
+    font-size: 35px;
+  }
+}
+
+/* For Small devices */
+@media only screen and (max-width: 599px) {
+  .navbar {
+    background-color: yellow;
+    color: black;
+  }
+}
+
+/* For Medium devices */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .navbar {
+    background-color: lightgreen;
+    color: black;
+  }
+}
+
+/* For Large devices */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .navbar {
+    background-color: red;
+    color: white;
+  }
+}
+
+/* For Extra Large devices */
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    background-color: black;
+    color: white;
+  }
+}
+
+/* For Large devices */
+@media only screen and (min-width: 992px) {
+  h1 {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+  }
+
+  p {
+    display: inline-block;
+    width: 65%;
+    margin-left: 5%;
+    vertical-align: top;
+  }
+}
+
+/* For Small devices */
+@media only screen and (max-width: 991px) {
+  h1 {
+    display: block;
+    width: 100%;
+  }
+
+  p {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
