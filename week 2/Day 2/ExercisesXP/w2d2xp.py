@@ -108,6 +108,25 @@ if fruit1 in fruits_list:
 else:
     print("You chose a new fruit. I hope you enjoy!")
 
+# Exercise 8: Who Ordered A Pizza ?
+# 
+# 1. Write a loop that asks a user to enter a series of pizza toppings, when the user inputs ‘quit’ stop asking for toppings.
+# 2. As they enter each topping, print a message saying you’ll add that topping to their pizza.
+# 3. Upon exiting the loop print all the toppings on the pizza pie and what the total price is (10 + 2.5 for each topping).
+
+topping_user = input("give me a pizza topping")
+all_topping = []
+
+while topping_user != "quit" :
+    print(f"{topping_user} will be added to the pizza")
+    all_topping.append(topping_user)
+    topping_user = input("give me a pizza topping")
+
+str_toppings = ",".join(all_topping) # create a string
+total = 10 + len(all_topping) * 2.5
+sentence = f"Here are your toppings {str_toppings}, and it will cost you {total}"
+print(sentence)
+
 
 # Exercise 9: Cinemax
 # 
@@ -125,6 +144,7 @@ else:
 #   Given a list of names, write a program that asks teenager for their age, 
 #   if they are not permitted to watch the movie, remove them from the list.
 #   At the end, print the final list.
+
 
 
 ages = input("How old are you and your family members? ")
