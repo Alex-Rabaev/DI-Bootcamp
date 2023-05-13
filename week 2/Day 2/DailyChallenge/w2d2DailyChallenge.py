@@ -4,15 +4,15 @@
 # 1. Ask the user for a number and a length.
 # 2. Create a program that prints a list of multiples of the number until the list length reaches length.
 
-number = int(input("Please, enter a number. "))
-l_list = int(input("Please, enter a length. "))
+number = int(input("Please, enter a number. ")) # 5
+l_list = int(input("Please, enter a length. ")) # 5
 number_list = []
-# for i in range(1, l_list + 1) :
-#     number_list.append(number_list(i - 1) * 2)
-i = 1
-while len(number_list) < l_list:
-    number_list.append(number * i)
-    i += 1
+for i in range(0, l_list) :
+    number_list.append(number * (i + 1))
+# i = 1
+# while len(number_list) < l_list:
+#     number_list.append(number * i)
+#     i += 1
 print(number_list)
 
 
