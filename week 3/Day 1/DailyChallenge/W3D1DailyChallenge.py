@@ -67,10 +67,12 @@ class Farm:
 
     def get_short_info(self):
         animal_types = self.get_animal_types()
+        for animal, amount in self.animals.items():
+            if amount > 1 :
+                position_animal = animal_types.index(animal)
+                animal_types[position_animal] += "s"
         if len(animal_types) == 1:
             animals = animal_types[0]
-        elif len(animal_types) == 2:
-            animals = " and ".join(animal_types)
         else:
             animals = ", ".join(animal_types[:-1]) + " and " + animal_types[-1]
         return f"{self.name}'s farm has {animals}."

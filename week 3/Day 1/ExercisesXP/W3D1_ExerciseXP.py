@@ -18,13 +18,13 @@ class Cat:
         self.name = cat_name
         self.age = cat_age
 
-lst_cats = [Cat("Fluffy", 5), Cat("Tom", 2), Cat("Whisckers", 8)]
+lst_cats = [Cat("Fluffy", 5), Cat("Tom", 2), Cat("Whisckers", 8), Cat("Roni", 5)]
 
 def oldest(cats) :
-    oldest_cat = cats[0].age
-    for i in range(1, len(cats)) :
-        if cats[i].age > oldest_cat :
-            oldest_cat = cats[i]
+    oldest_cat = 0
+    for item in cats :
+        if item.age > oldest_cat :
+            oldest_cat = item
     return oldest_cat
 
 print(f"The oldest cat is {oldest(lst_cats).name}, and is {oldest(lst_cats).age} years old.")
