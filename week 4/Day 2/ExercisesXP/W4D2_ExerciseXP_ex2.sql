@@ -7,6 +7,8 @@
 -- 2. Write a query to display the names (first_name, last_name) using an alias named “full_name”.
 
 -- SELECT first_name || ' ' || last_name AS full_name FROM customer
+-- or
+-- SELECT CONCAT(first_name ,' ', last_name) AS full_name FROM customer
 
 -- 3. Lets get all the dates that accounts were created. 
 -- 	  Write a query to select all the create_date from the “customer” table (there should be no duplicates).
