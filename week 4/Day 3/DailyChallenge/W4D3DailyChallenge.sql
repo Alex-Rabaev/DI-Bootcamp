@@ -15,7 +15,7 @@
 -- 	id SERIAL PRIMARY KEY,
 -- 	isLoggedIn BOOLEAN DEFAULT false, 
 -- 	customer_id INTEGER, 
--- 	FOREIGN KEY(customer_id) REFERENCES Customer(id)
+-- 	FOREIGN KEY(customer_id) UNIQUE REFERENCES Customer(id)
 -- )
 
 
@@ -30,7 +30,7 @@
 -- ('John', 'Doe'),
 -- ('Jerome', 'Lalu'),
 -- ('Lea', 'Rive')
-
+-- RETURNING *
 
 -- 3. Insert those customer profiles, use subqueries
 
@@ -63,3 +63,8 @@
 -- FROM Customer
 -- LEFT JOIN Customer_Profile ON Customer.id = Customer_Profile.customer_id
 -- WHERE isLoggedIn = false OR isLoggedIn IS NULL
+
+-- SELECT COUNT(*) AS num_customers_not_logged_in
+-- FROM Customer
+-- LEFT JOIN Customer_Profile ON Customer.id = Customer_Profile.customer_id
+-- WHERE isLoggedIn IS NOT true

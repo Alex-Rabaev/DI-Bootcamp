@@ -21,9 +21,9 @@ class Cat:
 lst_cats = [Cat("Fluffy", 5), Cat("Tom", 2), Cat("Whisckers", 8), Cat("Roni", 5)]
 
 def oldest(cats) :
-    oldest_cat = 0
+    oldest_cat = cats[0]
     for item in cats :
-        if item.age > oldest_cat :
+        if item.age > oldest_cat.age :
             oldest_cat = item
     return oldest_cat
 
