@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Hello {{user.first_name}} {{user.last_name}}</h1> -->
+    <h2>Welcome to my website</h2>
+    <h4>
+      Today we are going to talk about animals of {{family}} Family in our small
+      list.
+    </h4>
+    <ul>
+      {% for animal in animals %}
+      <li>--{{animal.name}}--</li>
+      <li>{{animal.name}} has {{ animal.legs}} legs</li>
+      <li>Weight - {{animal.weight}}</li>
+      <li>Height - {{animal.height}}</li>
+      <li>Speed - {{animal.speed}}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
+
+<!-- "id": 1,
+      "name": "Dog",
+      "legs": 4,
+      "weight": 5.67,
+      "height": 4.2,
+      "speed": 34,
+      "family": 2 -->
