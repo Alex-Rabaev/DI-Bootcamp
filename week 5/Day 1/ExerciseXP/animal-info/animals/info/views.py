@@ -16,10 +16,7 @@ def family(self, id):
     context = {
         'animals': [],
         'family' : ''
-    }
-    # Instead of animals, get dictionary from JSON
-    
-    # from json
+    }    
     for animal in animal_list:
         if animal['family'] == id:
             context['animals'].append(animal)
@@ -27,7 +24,7 @@ def family(self, id):
         if family['id'] == id :
             context['family'] = family['name']
             break
-    return render(self, 'index.html', context) # list of all animals in the family
+    return render(self, 'index.html', context) 
 
 def animals(self, id):
     context = {
