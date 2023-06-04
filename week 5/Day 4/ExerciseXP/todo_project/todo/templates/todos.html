@@ -1,0 +1,39 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Todo</title>
+  </head>
+  <body>
+    
+        {% for todo,form in todos_forms %}
+            <br>
+            title: {{todo.title}}
+            <br>
+            details: {{todo.details}}
+            <br>
+            has_been_done: {{todo.has_been_done}}
+            <br>
+            date_creation: {{todo.date_creation}}
+            <br>
+            date_completion: {{todo.date_completion}}
+            <br>
+            deadline_date: {{todo.deadline_date}}
+            <br>
+        
+
+            DONE: 
+            <form method = "post">
+                {%csrf_token%}
+                {{form}}
+                <button type="submit"> DONE </button>
+            </form>
+        {%endfor%}
+    </p>
+
+  </body>
+</html>

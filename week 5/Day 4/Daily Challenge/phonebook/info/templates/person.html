@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Person</title>
+  </head>
+  <body>
+    {% if person %}
+    <h1>Person Info</h1>
+    <p>Name: {{ person.name }}</p>
+    <p>Email: {{ person.email }}</p>
+    <p>Phone Number: {{ person.phone_number }}</p>
+    <p>Address: {{ person.address }}</p>
+    <a href="{% url 'search_person' %}">Back</a>
+    {% else %}
+    <h1>No Result Found</h1>
+    <a href="{% url 'search_person' %}">Back</a>
+    {% endif %}
+  </body>
+</html>

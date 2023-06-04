@@ -1,0 +1,93 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Dog",
+      "legs": 4,
+      "weight": 5.67,
+      "height": 4.2,
+      "speed": 34,
+      "family": 2
+    },
+    {
+      "id": 2,
+      "name": "Domestic Cat",
+      "legs": 2,
+      "weight": 5.67,
+      "height": 4.2,
+      "speed": 34,
+      "family": 1
+    },
+    {
+      "id": 3,
+      "name": "Panther",
+      "legs": 2,
+      "weight": 5.67,
+      "height": 4.2,
+      "speed": 34,
+      "family": 1
+    },
+    {
+      "id": 4,
+      "name": "Lizard",
+      "legs": 4,
+      "weight": 0.3,
+      "height": 0.1,
+      "speed": 10,
+      "family": 3
+    },
+    {
+      "id": 5,
+      "name": "Bee",
+      "legs": 6,
+      "weight": 0.01,
+      "height": 0.02,
+      "speed": 20,
+      "family": 4
+    },
+    {
+      "id": 6,
+      "name": "Spider",
+      "legs": 8,
+      "weight": 0.05,
+      "height": 0.03,
+      "speed": 5,
+      "family": 5
+    },
+    {
+      "id": 7,
+      "name": "Frog",
+      "legs": 4,
+      "weight": 0.2,
+      "height": 0.05,
+      "speed": 8,
+      "family": 6
+    }
+  ],
+  "families": [
+    {
+      "id": 1,
+      "name": "Felidae"
+    },
+    {
+      "id": 2,
+      "name": "Caninae"
+    },
+    {
+      "id": 3,
+      "name": "Reptile"
+    },
+    {
+      "id": 4,
+      "name": "Insect"
+    },
+    {
+      "id": 5,
+      "name": "Arachnid"
+    },
+    {
+      "id": 6,
+      "name": "Amphibian"
+    }
+  ]
+}
