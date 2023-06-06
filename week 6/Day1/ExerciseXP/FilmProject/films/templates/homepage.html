@@ -1,0 +1,31 @@
+{%extends 'partials/base.html'%} {%block content%}
+
+<div class="container">
+  <h2>Films</h2>
+  <div class="row">
+    {%for film in films%}
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{film.title}}</h5>
+          <p class="card-text">
+            <strong>Release Date:</strong> {{film.release_date}}<br />
+            <strong>Created in Country:</strong>
+            {{film.created_in_country}}<br />
+            <strong>Available in Countries:</strong>
+            {%for country in film.available_in_countries.all%} {{country.name}}
+            {%endfor%}<br />
+            <strong>Category:</strong>
+            {%for category in film.category.all%} {{category.name}}
+            {%endfor%}<br />
+            <strong>Directors:</strong>
+            {%for director in film.director.all%} {{director.first_name}}
+            {{director.last_name}} {%endfor%}
+          </p>
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+{%endblock%}
