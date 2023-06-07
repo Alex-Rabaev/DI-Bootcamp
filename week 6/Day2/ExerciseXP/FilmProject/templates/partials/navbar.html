@@ -1,0 +1,32 @@
+<div class="container">
+  <ul class="nav bg-info">
+    <li class="nav-item">
+      <a class="nav-link link-light" href="{% url 'homepage' %}">Homepage</a>
+    </li>
+    {% if user.is_superuser %}
+    <li class="nav-item">
+      <a class="nav-link link-light" href="{% url 'add_film' %}">Add Film</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="{% url 'add_director' %}">Add Director</a>
+    </li>
+    {% endif %}
+    <li class="nav-item">
+      <a class="nav-link link-light" href="{% url 'add_review' %}"
+        >Add review</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="{% url 'login' %}"
+        >Login</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="{% url 'logout' %}"
+        >Logout</a
+      >
+    </li>
+  </ul>
+</div>
+
+
