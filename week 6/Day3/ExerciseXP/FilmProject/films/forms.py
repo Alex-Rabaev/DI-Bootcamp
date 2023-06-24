@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth import get_user_model
 from .models import Film, Director, Review, Poster, Category, Country
 from django.utils import timezone
 
@@ -26,8 +27,19 @@ class DirectorForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ["film", "review_text", "rating"]
+        fields = "__all__"  # ["film", "review_text", "rating"]
         widgets = {"rating": forms.RadioSelect}
+
+    def __init__(self, *args, **kwargs):
+        self.review_author = kwargs.pop("review_author", None)
+        super().__init__(*args, **kwargs)
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        instance.review_author = self.review_author
+        if commit:
+            instance.save()
+        return instance
 
 
 class AddFilmWithPosterForm(forms.ModelForm):

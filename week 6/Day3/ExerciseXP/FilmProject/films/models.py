@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth import get_user_model
 
 # Create your models here.
 
@@ -28,7 +29,7 @@ class Director(models.Model):
 
 class Film(models.Model):
     title = models.CharField(max_length=50)
-    release_date = models.DateField(default=timezone.now().date())
+    release_date = models.DateField(default=timezone.now)
     created_in_country = models.ForeignKey(
         Country, on_delete=models.CASCADE, related_name="films_created"
     )
@@ -42,8 +43,14 @@ class Film(models.Model):
         return self.title
 
 
+User = get_user_model()
+
+
 class Review(models.Model):
     film = models.ForeignKey(Film, on_delete=models.CASCADE, related_name="reviews")
+    review_author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="reviews"
+    )
     review_text = models.TextField()
     rating = models.IntegerField(choices=[(i, i) for i in range(1, 11)])
 
@@ -51,9 +58,6 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Review for {self.film.title}"
-
-
-from django.db import models
 
 
 class Poster(models.Model):

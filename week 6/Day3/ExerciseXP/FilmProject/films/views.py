@@ -65,6 +65,15 @@ class ReviewCreateView(LoginRequiredMixin, CreateView):
         else:
             return {}
 
+    def form_valid(self, form):
+        form.instance.review_author = self.request.user
+        return super().form_valid(form)
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs["review_author"] = self.request.user
+        return kwargs
+
 
 class FilmUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Film
