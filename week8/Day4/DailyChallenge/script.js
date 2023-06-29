@@ -10,6 +10,11 @@
 // 2. Create a method called watch() which displays a string as follows:
 //    “uploader parameter watched all time parameter of title parameter!”
 
+function timeFormat (timeInSec) {
+    const [minutes, seconds] = [Math.floor(timeInSec / 60), timeInSec % 60];
+    return `${minutes} minutes${seconds === 0 ? "": ` and ${seconds} seconds`}`
+}
+
 class Video {
   constructor(title, uploader, time) {
     this.title = title;
@@ -17,7 +22,7 @@ class Video {
     this.time = time;
   }
   watch() {
-    console.log(`${this.uploader} watched all ${this.time} seconds of '${this.title}'!`);
+    console.log(`${this.uploader} watched all ${timeFormat(this.time)} of '${this.title}'!`);
   }
 };
 
