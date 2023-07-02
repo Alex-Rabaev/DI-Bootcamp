@@ -12,7 +12,7 @@ function isAnagram(str1, str2) {
 const str1 = "Hello world";
 const str2 = "Bye bye world";
 
-isAnagram(str1, str2); // true - "yes, those strings are anagram"
+isAnagram(str1, str2);
 
 const ex1 = "Astronomer";
 const ex2 = "Moon starer";
