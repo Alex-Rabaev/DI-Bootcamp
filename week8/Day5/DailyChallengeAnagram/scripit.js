@@ -1,13 +1,9 @@
 
 function isAnagram(str1, str2) {
     const str1Nospace = str1.replace(/\s/g, "").toLowerCase();
-    // console.log(str1Nospace);
     const sortedStr1 = str1Nospace.split("").sort().join("");
-    // console.log(sortedStr1);
     const str2Nospace = str2.replace(/\s/g, "").toLowerCase();
-    // console.log(str2Nospace);
     const sortedStr2 = str2Nospace.split("").sort().join("");
-    // console.log(sortedStr2);
     sortedStr1===sortedStr2 ? console.log(`yes, strings "${str1}" and "${str2}" are anagram`) : 
                               console.log(`no, strings "${str1}" and "${str2}" are not anagram`);
     return sortedStr1===sortedStr2;
