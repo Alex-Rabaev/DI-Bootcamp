@@ -7,7 +7,7 @@ async function fetchGif(event) {
     try {
         event.preventDefault();
         const inputValue = document.querySelector("#category").value;
-        const response = await fetch(`api.giphy.com/v1/gifs/random?tag=${inputValue}&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`)
+        const response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My&tag=${inputValue}`)
         if (response.ok) {
             const dataGif = await response.json();
             displayGif(dataGif);
@@ -22,8 +22,8 @@ async function fetchGif(event) {
 
 function displayGif(dataGif) {
     console.log("in displayGif");
-    const gifURL = dataGif["data"]["image"]["original"]["url"];
-    const div = document.getElementById("contain+er");
+    const gifURL = dataGif["data"]["images"]["original"]["url"];
+    const div = document.getElementById("container");
 
     const divGif = document.createElement("div")
     divGif.style.border = "2px solid black"
@@ -45,6 +45,10 @@ function displayGif(dataGif) {
 function deleeteGif (event) {
     const parent = event.target.parentElement;
     parent.remove();
+    const div = document.getElementById("container");
+    if (div.children.length === 0) {
+        btnDelete.style.display = "none";
+    }
 }
 
 const btnDelete = document.querySelector("#btnDelete");
