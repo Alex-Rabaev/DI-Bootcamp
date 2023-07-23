@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars</title>
+    <link
+      rel="stylesheet"
+      href="style.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png"
+        alt=""
+      />
+      <div id="person_info">
+        <div>
+          <p id="error" class="hidden">Oh no, there was an error</p>
+          <i
+            class="fa-solid fa-sync fa-spin"
+            id="spinner"
+            style="display: none"
+          ></i>
+          <p class="loading" style="display: none">Loading...</p>
+        </div>
+      </div>
+      <button id="btn_search">Find Someone</button>
+    </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

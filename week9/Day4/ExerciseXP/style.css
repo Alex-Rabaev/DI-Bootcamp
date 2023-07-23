@@ -1,0 +1,75 @@
+body {
+  background-color: black;
+  background-image: url(https://i.giphy.com/media/TxVVB6PfWMjE4/200.webp);
+  justify-content: center;
+  font-family: "Helvetica Neue";
+  gap: 3rem;
+}
+
+.container {
+  width: 600px;
+  height: 250px;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+  position: relative;
+}
+
+img {
+  width: 550px;
+  height: 350px;
+}
+
+#person_info {
+  border: 2px solid yellow;
+  border-radius: 15px;
+  color: white;
+  width: 600px;
+  height: 250px;
+  margin: 0 auto;
+  margin-top: 0px;
+}
+
+.error {
+  font-size: 24px;
+  color: red;
+}
+
+#spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid yellow;
+  border-top: 6px solid black;
+  animation: spin 1s linear infinite;
+  position: absolute;
+}
+
+.loading {
+  font-size: 24px;
+  color: white;
+  font-style: "fa-solid fa-sync fa-spin";
+}
+
+#btn_search {
+  border: 2px solid yellow;
+  border-radius: 1rem;
+  padding: 1em 2em;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 300ms;
+  margin: 0 auto;
+}
+
+#button:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
